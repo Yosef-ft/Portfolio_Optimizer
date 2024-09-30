@@ -41,6 +41,7 @@ if st.button('Optimize'):
             allow_short = False
         money = float(money)
         stocks = yf.download(tickers=symbols, period="max")['Adj Close']
+        st.dataframe(stocks)
         portfolio_optimizer = PortOpt()
         allocation, leftover = portfolio_optimizer.budget_allocator(stocks,money ,allow_short)
 
