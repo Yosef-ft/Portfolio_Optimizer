@@ -7,7 +7,7 @@ import cvxpy
 from pypfopt.efficient_frontier import EfficientFrontier
 from pypfopt.expected_returns import mean_historical_return
 from pypfopt.risk_models import CovarianceShrinkage
-from pypfopt import plotting
+# from pypfopt import plotting
 from pypfopt.discrete_allocation import DiscreteAllocation, get_latest_prices
 from pypfopt import CLA, objective_functions
 
@@ -288,28 +288,28 @@ class PortOpt:
         return clean_weight
     
 
-    def plot_weights(self, adj_close: pd.DataFrame, allow_shorts=False):
-        '''
-        This function takes Efficient Frontier and plots the weights
+    # def plot_weights(self, adj_close: pd.DataFrame, allow_shorts=False):
+    #     '''
+    #     This function takes Efficient Frontier and plots the weights
 
-        Parameters:
-            adj_close (pandas.Datafrme): dataframe containing adjusted close for all tickers
-            allow_shorts(bool): this will plot if we allow short selling
+    #     Parameters:
+    #         adj_close (pandas.Datafrme): dataframe containing adjusted close for all tickers
+    #         allow_shorts(bool): this will plot if we allow short selling
 
-        Returns:
-            matplotlib plot
-        '''
+    #     Returns:
+    #         matplotlib plot
+    #     '''
 
-        if allow_shorts:
-            covariance_matrix, expected_return = self.calculate_eReturn_covariance(adj_close)
-            ef = EfficientFrontier(expected_return, covariance_matrix, weight_bounds=(-1,1)) 
+    #     if allow_shorts:
+    #         covariance_matrix, expected_return = self.calculate_eReturn_covariance(adj_close)
+    #         ef = EfficientFrontier(expected_return, covariance_matrix, weight_bounds=(-1,1)) 
             
-        else:
-            covariance_matrix, expected_return = self.calculate_eReturn_covariance(adj_close)
-            ef = EfficientFrontier(expected_return, covariance_matrix)   
+    #     else:
+    #         covariance_matrix, expected_return = self.calculate_eReturn_covariance(adj_close)
+    #         ef = EfficientFrontier(expected_return, covariance_matrix)   
              
 
-        plotting.plot_weights(ef.max_sharpe())
+    #     plotting.plot_weights(ef.max_sharpe())
 
 
     def plot_efficient_frontier_custom(self, adj_close: pd.DataFrame, allow_shorts=False):
