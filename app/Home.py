@@ -7,6 +7,13 @@ import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
 
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
+
 sys.path.append(os.path.abspath('scripts'))
 from portOptimizer import PortOpt
 
