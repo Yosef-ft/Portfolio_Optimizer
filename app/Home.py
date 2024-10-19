@@ -7,6 +7,8 @@ import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
 
+st.set_page_config(layout="wide")
+
 hide_github_icon = """
 <style>
 #GithubIcon {
@@ -19,7 +21,7 @@ st.markdown(hide_github_icon, unsafe_allow_html=True)
 sys.path.append(os.path.abspath('scripts'))
 from portOptimizer import PortOpt
 
-st.set_page_config(layout="wide")
+
 
 
 st.title("Portfolio Optimizer")
