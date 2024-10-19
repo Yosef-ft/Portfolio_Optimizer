@@ -8,9 +8,11 @@ import numpy as np
 import plotly.graph_objects as go
 
 hide_github_icon = """
+<style>
 #GithubIcon {
-  visibility: hidden;
+  display: none;
 }
+</style>
 """
 st.markdown(hide_github_icon, unsafe_allow_html=True)
 
