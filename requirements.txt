@@ -18,6 +18,7 @@ gitdb==4.0.11
 GitPython==3.1.43
 html5lib==1.1
 idna==3.10
+importlib_metadata==7.2.1
 Jinja2==3.1.4
 joblib==1.4.2
 jsonschema==4.23.0
@@ -32,13 +33,13 @@ multitasking==0.0.11
 narwhals==1.8.4
 numpy==1.26.4
 osqp==0.6.7.post1
-packaging==24.1
+packaging==23.2
 pandas==2.2.3
 peewee==3.17.6
 pillow==10.4.0
 platformdirs==4.3.6
 plotly==5.24.1
-protobuf==5.28.2
+protobuf==4.25.5
 pyarrow==17.0.0
 pydeck==0.9.1
 Pygments==2.18.0
@@ -65,7 +66,10 @@ toml==0.10.2
 tornado==6.4.1
 typing_extensions==4.12.2
 tzdata==2024.2
+tzlocal==5.2
 urllib3==2.2.3
+validators==0.34.0
 watchdog==4.0.2
 webencodings==0.5.1
 yfinance==0.2.43
+zipp==3.20.2
